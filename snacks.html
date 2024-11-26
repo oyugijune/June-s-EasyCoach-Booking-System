@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snacks & Meals</title>
+    <link rel="stylesheet" href="styles/snacks.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/icon.png"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Booking</a></li>
+                <li><a href="snacks.html" class="active">Snacks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Snacks & Meals</h1>
+            <p>Choose your favorite snacks and meals to enjoy during your journey.</p>
+        </section>
+
+        <section class="menu">
+            <h2>Snacks</h2>
+            <div class="menu-grid" id="snacks-list">
+                <!-- Snacks will be dynamically loaded -->
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2>Meals</h2>
+            <div class="menu-grid" id="meals-list">
+                <!-- Meals will be dynamically loaded -->
+            </div>
+        </section>
+
+        <section class="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items">
+                <p>No items in your cart yet.</p>
+            </div>
+            <button id="checkout-button" disabled>Proceed to Checkout</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 BusBooking. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts/snacks.js"></script>
+</body>
+</html>

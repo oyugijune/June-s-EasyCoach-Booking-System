@@ -1,0 +1,40 @@
+{
+    "name": "EasyCoach Booking App",
+    "short_name": "EasyCoach",
+    "description": "Book, track, order delicacy and leave a review at your own comfort.",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#ff0000",
+    "icons": [
+        {
+            "src": "/icons/android-launchericon-192×192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "icons/icon-192×192.png",
+            "sizes": "192x192",
+            "type":"image/png"
+        },
+        {
+            "src":"/icons/android-launchericon-512×512.png",
+            "sizes":"512x512",
+            "type":"image/png"
+        }
+    ],
+    "screenshorts": [
+        {
+            "src":"/screenshots/screenshot1-mobile.png",
+            "sizes":"748x968",
+            "type":"image/png",
+            "form_factor": "narrow"
+        },
+        {
+            "src":"/screenshots/screenshot2-wide.png",
+            "sizes":"1920x1080",
+            "type":"image/png",
+            "form_factor":"wide"
+        }
+    ]   
+}

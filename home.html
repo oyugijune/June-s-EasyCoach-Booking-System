@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Booking</title>
+    <link rel="stylesheet" href="styles/home.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="booking.html" class="active">Booking</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Booking Details Form -->
+    <section id="booking-section">
+        <h1>Book Your Journey</h1>
+        <form id="search-form">
+            <label for="from">From:</label>
+            <select id="from" name="from" required>
+                <option value="" disabled selected>Select Departure</option>
+                <option value="Nairobi">NAIROBI</option>
+                <option value="Mombasa">MOMBASA</option>
+                <option value="Kisumu">KISUMU</option>
+                <option value="Awendo">AWENDO</option>
+                <option value="Migori">MIGORI</option>
+                <option value="Siaya">SIAYA</option>
+                <option value="Homabay">HOMABAY</option>
+                <!-- Add other options as needed -->
+            </select>
+
+            <label for="to">To:</label>
+            <select id="to" name="to" required>
+                <option value="" disabled selected>Select Destination</option>
+                <option value="Nairobi">NAIROBI</option>
+                <option value="Mombasa">MOMBASA</option>
+                <option value="Kisumu">KISUMU</option>
+                <option value="Awendo">AWENDO</option>
+                <option value="Migori">MIGORI</option>
+                <option value="Siaya">SIAYA</option>
+                <option value="Homabay">HOMABAY</option>
+                <!-- Add other options as needed -->
+            </select>
+
+            <label for="date">Travel Date:</label>
+            <input type="date" id="date" name="booking-date" required>
+
+            <button type="button" onclick="searchBuses()"><b>Search Buses</b></button>
+        </form>
+    </section>
+
+    <!-- Available Buses Section -->
+    <section id="available-buses" style="display: none;">
+        <h2>Available Buses</h2>
+        <div id="bus-list">
+            <!-- List of available buses will be displayed here dynamically -->
+        </div>
+    </section>
+
+    <!-- Seat Selection Section -->
+    <section id="seat-selection" style="display: none;">
+        <h2>Select Your Seats</h2>
+        <div id="seat-map-container">
+            <div id="seat-map">
+                <!-- Seat map will be dynamically generated -->
+            </div>
+            <p id="selected-seats" data-selected-seats="">Selected Seats: None</p><br>
+            <p> <strong>Total:</strong><span id="total-cost"></span></p>
+        </div>
+        <button type="button" onclick="addSnacks()">Add Snacks</button>
+    </section>
+    <br>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Junes' EasyCoach booking App.<br> All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/home.js"></script>
+</body>
+</html>

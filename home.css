@@ -1,0 +1,116 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    background-color: red;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Booking Form */
+#booking-section, #available-buses, #seat-selection {
+    padding: 20px;
+    text-align: center;
+}
+
+#booking-section h1, #available-buses h2, #seat-selection h2 {
+    color: red;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form select, form input, form button {
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    max-width: 300px;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+form button {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#available-buses{
+    border: 2px solid darkred;
+    border-radius: 8px;
+}
+
+.bus-list {
+    border: 2px solid red;
+    border-radius: 8px;
+}
+
+/* Seat Selection */
+#seat-map {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border: 1px solid #333;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.seat.selected {
+    background-color: red;
+    color: white;
+}
+
+.aisle {
+    width: 20px;
+    height: 100%;
+    background-color: #ccc;
+}
+
+#seat-map {
+    max-width: 100%;
+    overflow-x: auto;
+}

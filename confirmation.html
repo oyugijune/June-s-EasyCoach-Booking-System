@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation</title>
+    <link rel="stylesheet" href="styles/confirm.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/icon.png"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Booking</a></li>
+                <li><a href="snacks.html">Snacks</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <h1>Confirm Your Booking</h1>
+
+            <!-- Booking Details -->
+            <div class="details-section">
+                <h2>Booking Details</h2>
+                <p><strong>From:</strong> <span id="from"></span></p>
+                <p><strong>To:</strong> <span id="to"></span></p>
+                <p><strong>Departure Time:</strong> <span id="confirm-date"></span></p>
+                <p><strong>Seat(s):</strong> <span id="seats"></span></p>
+                <p><strong>Fare:</strong> <span id="totalCost"></span></p>
+            </div>
+
+            <!-- Snacks & Meals -->
+            <div class="details-section" id="cart-details"></div>
+
+            <!-- Personal Details -->
+            <div class="details-section">
+                <h2>Your Details</h2>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+
+                <label for="contact">Contact:</label>
+                <input type="tel" id="contact" placeholder="Enter your contact">
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <!-- Payment Details -->
+            <section class="payment">
+    <h2>Payment Method</h2>
+                <p class="total-amount">Total Amount: <span id="total-amount">KES 0.00</span> / <span id="total-amount-usd">USD 0.00</span></p>
+
+    <div class="payment-options">
+        <!-- Mobile Money Payment -->
+        <div class="payment-option">
+            <input type="radio" id="mobile-money" name="payment-method" value="mobile-money" checked>
+            <label for="mobile-money">Mobile Money</label>
+            <div class="mobile-payment-form">
+                <p>Select your service provider:</p>
+                <input type="radio" id="mpesa" name="mobile-service" value="mpesa" checked>
+                <label for="mpesa">M-Pesa</label><br>
+                <input type="radio" id="airtel" name="mobile-service" value="airtel">
+                <label for="airtel">Airtel Money</label><br>
+                <input type="radio" id="tkash" name="mobile-service" value="tkash">
+                <label for="tkash">T-Kash</label><br>
+                <form id="mpesaForm">
+                    <label for="phone-number">Enter your phone number:</label>
+                    <input type="tel" id="phone-number" placeholder="e.g. 254712345678">
+                    <button type="submit" onclick="payment()" id="pay-mobile-money">Pay Now</button>
+                </form>
+                <p id="payment-status"></p>
+            </div>
+        </div>
+
+        <!-- PayPal Payment -->
+        <div class="payment-option">
+            <input type="radio" id="paypal" name="payment-method" value="paypal">
+            <label for="paypal">PayPal</label>
+            <div class="paypal-payment-form">
+                <p>You will be redirected to PayPal to complete your payment in USD.</p>
+                <button id="pay-paypal">Proceed to PayPal</button>
+            </div>
+        </div>
+
+        <!-- Card Payment -->
+        <div class="payment-option">
+            <input type="radio" id="card" name="payment-method" value="card">
+            <label for="card">Credit/Debit Card</label>
+            <div class="card-payment-form">
+                <label for="card-name">Name on Card:</label>
+                <input type="text" id="card-name" placeholder="Full Name">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" placeholder="e.g. 1234 5678 9012 3456">
+                <label for="card-expiry">Expiry Date:</label>
+                <input type="month" id="card-expiry">
+                <label for="card-cvv">CVV:</label>
+                <input type="text" id="card-cvv" placeholder="e.g. 123">
+                <button id="pay-card">Pay Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 June's EnaCoach booking. All Rights Reserved.</p>
+    </footer>
+    <script src="scripts/confirm.js"></script>
+    <script>
+        const busData = JSON.parse(localStorage.getItem("selectedBus"));
+        const seats = JSON.parse(localStorage.getItem("selectedSeats"));
+        const totalCost = localStorage.getItem("totalCost");
+
+        document.getElementById("from").textContent = busData.route.split(" to ")[0];
+        document.getElementById("to").textContent = busData.route.split(" to ")[1];
+        document.getElementById("confirm-date").textContent = busData.busTime;
+        document.getElementById("seats").textContent = seats.join(", ") || "None";
+        document.getElementById("fare").textContent = `KES ${busData.fare}`;
+        document.getElementById("total-amount").textContent = `KES ${totalCost}`;
+    </script>
+</body>
+</html>5
