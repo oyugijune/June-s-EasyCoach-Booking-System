@@ -1,18 +1,18 @@
 // Snacks and Meals Data
 document.addEventListener("DOMContentLoaded", () => {
     const snacks = [
-        { id: 1, name: "Chips", price: 100, image: "images/chips.png" },
-        { id: 2, name: "Cookies", price: 50, image: "images/cookies.png" },
-        { id: 3, name: "Soda", price: 80, image: "images/soda.png" },
-        { id: 4, name: "Yoghurt", price: 100, image: "images/ghurt.png" },
-        { id: 5, name: "ProBiotic", price: 150, image: "images/yoghurt.png" },
+        { id: 1, name: "Chips", price: 100, image: "chips.png" },
+        { id: 2, name: "Cookies", price: 50, image: "cookies.png" },
+        { id: 3, name: "Soda", price: 80, image: "soda.png" },
+        { id: 4, name: "Yoghurt", price: 100, image: "ghurt.png" },
+        { id: 5, name: "ProBiotic", price: 150, image: "yoghurt.png" },
     ];
     
     const meals = [
-        { id: 6, name: "Burger", price: 300, image: "images/bugger.png" },
-        { id: 7, name: "Pizza", price: 500, image: "images/pizza.png" },
-        { id: 8, name: "Ugali wetfry", price: 400, image: "images/ugali.png" },
-        { id: 9, name: "Chicken wetfry", price: 500, image: "images/chicken.png" },
+        { id: 6, name: "Burger", price: 300, image: "bugger.png" },
+        { id: 7, name: "Pizza", price: 500, image: "pizza.png" },
+        { id: 8, name: "Ugali wetfry", price: 400, image: "ugali.png" },
+        { id: 9, name: "Chicken wetfry", price: 500, image: "chicken.png" },
     ];
 
     const snacksList = document.getElementById("snacks-list");
